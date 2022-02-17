@@ -1,0 +1,17 @@
+<div class="ingreso">
+    <h2 class="ingreso_titulo">Ingresos</h2>
+       
+        
+        <div *ngFor="let ingresos of ingreso" class="elemento limpiarEstilos">
+            <div class="elemento_descripcion">{{ingresos.description}}</div>
+            <div class="right limpiarEstilos">
+                <div class="elemento_valor">{{ingresos.valor | currency:'DOP':'DOP$':'1.2-2'}}</div>
+                <div class="elemento_eliminar">
+                    <button class="elemento_eliminar--btn">
+                        <i class="ion-ios-close-outline" (click)="EliminarRegistro(ingresos)"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+</div>
